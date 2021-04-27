@@ -1,0 +1,97 @@
+/* Root */
+:root {
+  /* Font size */
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+
+  /* Margin */
+  --margin-micro: 2px;
+  --margin-small: 6px;
+  --margin-normal: 10px;
+  --margin-large: 25px;
+  --margin-hastag: 5px;
+  --margin-block: 40px;
+
+  /* Padding */
+  --padding-small: 3px;
+  --padding-normal: 6px;
+  --padding-large: 12px;
+
+  /* Header */
+  --header-margin: 100px;
+
+  /* Search */
+  --search-box-color: #eeeeee;
+  --search-icon-color: #aeaeae;
+
+  /* logo */
+  --logo-size: 45px;
+  --logo-font-size: 30px;
+}
+
+/* All */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto;
+}
+
+.header {
+  display: flex;
+  margin-left: var(--header-margin);
+  padding: 35px 0;
+}
+
+.header .logo {
+  display: flex;
+}
+.header .logo img {
+  background-color: #f5f5f5;
+  width: var(--logo-size);
+  height: var(--logo-size);
+  border-radius: 50%;
+}
+
+.header .logo .logoName {
+  padding-bottom: var(--padding-large);
+  margin: auto 0;
+  margin-left: var(--margin-normal);
+  font-size: var(--logo-font-size);
+}
+
+.header label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  position: relative;
+  margin-left: var(--margin-block);
+}
+
+.header label input {
+  width: 400px;
+  height: 20px;
+  margin: auto 0;
+  border: none;
+  color: transparent;
+}
+
+.header label .searchIcon {
+  position: absolute;
+  right: 20px;
+  color: var(--search-icon-color);
+}
+
+.header label .searchBackground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: var(--search-box-color);
+  background-color: var(--search-box-color);
+}
