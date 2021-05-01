@@ -15,34 +15,43 @@
 <body>
     <!-- Header -->
     <div class="header">
+        <div class="headerMarginLogo"></div>
         <button class="logo">
             <img src="/img/Logo.png" alt="logo">
             <span class="logoName">Js Shopping</span>
         </button>
+        <div class="logoMarginLabel"></div>
         <label for="searchBox">
             <i class="fas fa-square-full searchBackground"></i>
             <input type="search" name="searchBox" id="search">
             <button class="searchIcon"><i class="fas fa-search"></i></button>               
         </label>
-        <div>
-            <ul class="membership">
+        <div class="labelMarginMembership"></div>
+        <div class="membership">
+            <ul >
                 <li><button class="login"><i class="fas fa-sign-in-alt fa-2x"></i><span>Login</span></button></li>
                 <li><button class="myPage"><i class="far fa-user fa-2x"></i><span>My Page</span></button></li>
             </ul>
         </div>
+        <div class="membershipMarginHeader"></div>
     </div>
         
     <!-- Category -->
     <section class="category">
-        <ul class="sex">
-            <li><input type="checkbox" name="man" id="man"><label for="man">Man</label></li>
-            <li><input type="checkbox" name="woman" id="woman"><label for="woman">Woman</label></li>
-        </ul>
-        <ul class="clothes">
-            <li><button class="item">Shirt</button></li>
-            <li><button class="item">Pants</button></li>
-            <li><button class="item">Shoes</button></li>
-        </ul>
+        <button class="menu">
+            <i class="fas fa-bars fa-2x"></i>
+        </button>
+        <div class="choice">
+            <ul class="sex">
+                <li><input type="checkbox" name="man" id="man"><label for="man">Man</label></li>
+                <li><input type="checkbox" name="woman" id="woman"><label for="woman">Woman</label></li>
+            </ul>
+            <ul class="clothes">
+                <li><button class="item">Shirt</button></li>
+                <li><button class="item">Pants</button></li>
+                <li><button class="item">Shoes</button></li>
+            </ul>
+        </div>
     </section>
     
     <!-- Shopping List -->

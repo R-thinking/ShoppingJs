@@ -7,10 +7,10 @@
   --font-micro: 10px;
 
   /* Margin */
-  --margin-micro: 2px;
-  --margin-small: 6px;
-  --margin-normal: 10px;
-  --margin-large: 25px;
+  --margin-micro: 5px;
+  --margin-small: 10px;
+  --margin-normal: 15px;
+  --margin-large: 35px;
   --margin-hastag: 5px;
   --margin-block: 55px;
 
@@ -20,8 +20,14 @@
   --padding-large: 12px;
 
   /* Header */
-  --header-margin-left: 180px;
   --header-margin-topbot: 40px;
+  --header-margin-logo: 15%;
+  --header-logo-width: 18%;
+  --logo-margin-label: 2%;
+  --header-label-width: 30%;
+  --label-margin-membership: 26%;
+  --header-membership-width: 7%;
+  --membership-margin-header: 2%;
 
   /* logo */
   --logo-width: 240px;
@@ -36,8 +42,13 @@
   --searchBox-textfield-height: 25px;
 
   /* category */
+  --category-height: 60px;
   --category-border-width: 1px;
   --category-border-color: #aeaeae;
+
+  /* Menu */
+  --menu-border-width: 1px;
+  --menu-border-color: #aeaeae;
 }
 
 /* All */
@@ -73,23 +84,31 @@ input:focus {
   outline: none;
 }
 
+/* Header */
 .header {
   display: flex;
+  width: 100vw;
   position: relative;
   margin: var(--header-margin-topbot) 0;
-  margin-left: var(--header-margin-left);
+  /* margin-left: var(--header-margin-logo); */
+}
+
+.header .headerMarginLogo {
+  flex: 2 2 var(--header-margin-logo);
 }
 
 .header .logo {
   display: flex;
-  width: var(--logo-width);
-  justify-content: space-around;
+  position: relative;
+  flex: 1 1 var(--header-logo-width);
+  min-width: fit-content;
 }
 .header .logo img {
   background-color: #f5f5f5;
   width: var(--logo-size);
   height: var(--logo-size);
   border-radius: 50%;
+  margin-right: var(--margin-small);
 }
 
 .header .logo .logoName {
@@ -98,20 +117,24 @@ input:focus {
   font-size: var(--logo-font-size);
 }
 
+.header .logoMarginLabel {
+  flex: 1 1 var(--logo-margin-label);
+}
+
 .header label {
   display: flex;
   align-items: center;
-  width: var(--searchBox-width);
   position: relative;
-  margin-left: var(--margin-block);
+  /* margin-left: var(--logo-margin-label); */
+  flex: 1 1 var(--header-label-width);
 }
 
 .header label input {
-  width: var(--searchBox-textfield-width);
+  width: 75%;
   height: var(--searchBox-textfield-height);
   background-color: var(--search-box-color);
   margin: auto 0;
-  margin-left: 30px;
+  margin-left: 10%;
   font-size: var(--font-large);
 }
 
@@ -130,13 +153,22 @@ input:focus {
   position: absolute;
 }
 
+.header .labelMarginMembership {
+  flex: 2 2 var(--label-margin-membership);
+}
+
 .header .membership {
-  display: flex;
+  position: relative;
+  /* margin-left: var(--label-margin-membership); */
+  flex: 1 1 var(--header-membership-width);
+  /* margin-right: var(--membership-margin-header); */
+  min-width: fit-content;
+}
+
+.header .membership ul {
   height: 100%;
-  width: 150px;
-  justify-content: space-around;
-  position: absolute;
-  right: 10px;
+  width: 100%;
+  display: flex;
 }
 
 .header .membership button {
@@ -146,21 +178,73 @@ input:focus {
   justify-content: center;
 }
 
+.header .membership button.login {
+  margin-right: var(--margin-normal);
+}
+
 .header .membership button i {
   margin: 0 auto;
+  margin-bottom: var(--margin-micro);
 }
 
+.header .membershipMarginHeader {
+  flex: 1 1 var(--membership-margin-header);
+}
+
+/* Category */
 .category {
   display: flex;
+  height: var(--category-height);
   border-top: var(--category-border-width) solid var(--category-border-color);
   border-bottom: var(--category-border-width) solid var(--category-border-color);
+  padding-left: 90px;
+  margin-top: var(--margin-block);
 }
 
-.category ul.sex {
+.category .menu {
+  margin: auto 0;
+  height: 100%;
+  width: 55px;
+  margin-right: var(--margin-block);
+  border-right: var(--menu-border-width) solid var(--menu-border-color);
+  border-left: var(--menu-border-width) solid var(--menu-border-color);
+}
+
+.category .choice {
+  height: 100%;
   display: flex;
+}
+
+.category .choice .sex {
+  display: flex;
+  width: 90px;
   flex-direction: column;
+  font-size: var(--font-normal);
+  margin: auto 0;
+  margin-right: var(--margin-large);
 }
 
-.category ul.clothes {
+.category .choice .sex li {
   display: flex;
+}
+
+.category .choice .sex li input {
+  margin: auto 0;
+  margin-right: var(--margin-micro);
+}
+
+.category .choice .sex li label {
+  position: relative;
+  bottom: 2px;
+}
+
+.category .clothes {
+  display: flex;
+  width: 400px;
+  margin: auto 0;
+  justify-content: space-around;
+}
+
+.category .clothes li button {
+  font-size: var(--font-large);
 }
