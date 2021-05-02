@@ -20,7 +20,7 @@
   --padding-large: 12px;
 
   /* Header */
-  --header-margin-topbot: 40px;
+  --header-margin-topbot: 60px;
   --header-margin-logo: 15%;
   --header-logo-width: 18%;
   --logo-margin-label: 2%;
@@ -49,6 +49,9 @@
   /* Menu */
   --menu-border-width: 1px;
   --menu-border-color: #aeaeae;
+
+  /* Shopping List */
+  --shoppingList-Margin-LR: 130px;
 }
 
 /* All */
@@ -84,13 +87,19 @@ input:focus {
   outline: none;
 }
 
+/* a tag */
+a:visited,
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
 /* Header */
 .header {
   display: flex;
   width: 100vw;
   position: relative;
   margin: var(--header-margin-topbot) 0;
-  /* margin-left: var(--header-margin-logo); */
 }
 
 .header .headerMarginLogo {
@@ -119,14 +128,15 @@ input:focus {
 
 .header .logoMarginLabel {
   flex: 1 1 var(--logo-margin-label);
+  min-width: 30px;
 }
 
 .header label {
   display: flex;
   align-items: center;
   position: relative;
-  /* margin-left: var(--logo-margin-label); */
   flex: 1 1 var(--header-label-width);
+  min-width: 300px;
 }
 
 .header label input {
@@ -159,9 +169,7 @@ input:focus {
 
 .header .membership {
   position: relative;
-  /* margin-left: var(--label-margin-membership); */
   flex: 1 1 var(--header-membership-width);
-  /* margin-right: var(--membership-margin-header); */
   min-width: fit-content;
 }
 
@@ -179,7 +187,7 @@ input:focus {
 }
 
 .header .membership button.login {
-  margin-right: var(--margin-normal);
+  margin-right: var(--margin-large);
 }
 
 .header .membership button i {
@@ -194,11 +202,11 @@ input:focus {
 /* Category */
 .category {
   display: flex;
+  width: 100vw;
   height: var(--category-height);
   border-top: var(--category-border-width) solid var(--category-border-color);
   border-bottom: var(--category-border-width) solid var(--category-border-color);
   padding-left: 90px;
-  margin-top: var(--margin-block);
 }
 
 .category .menu {
@@ -247,4 +255,31 @@ input:focus {
 
 .category .clothes li button {
   font-size: var(--font-large);
+}
+
+.shoppingList .items {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  margin-top: var(--margin-block);
+  padding: 0 var(--shoppingList-Margin-LR);
+}
+
+.shoppingList .items .item {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 300px;
+}
+
+.shoppingList .items .item .thumbNail {
+  flex: 1 1 70%;
+}
+.shoppingList .items .item .thumbNail img {
+  width: 100%;
+  height: 100%;
+}
+
+.shoppingList .items .item .metadata {
+  flex: 1 1 30%;
 }

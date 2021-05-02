@@ -15,32 +15,41 @@
 <body>
     <!-- Header -->
     <div class="header">
+        <!-- Margin -->
         <div class="headerMarginLogo"></div>
+        <!-- Logo -->
         <button class="logo">
             <img src="/img/Logo.png" alt="logo">
             <span class="logoName">Js Shopping</span>
         </button>
-        <div class="logoMarginLabel"></div>
+        <!-- Margin -->
+        <div class="logoMarginLabel"></div>  
+        <!-- Search Box -->
         <label for="searchBox">
             <i class="fas fa-square-full searchBackground"></i>
             <input type="search" name="searchBox" id="search">
             <button class="searchIcon"><i class="fas fa-search"></i></button>               
         </label>
+        <!-- Margin -->
         <div class="labelMarginMembership"></div>
+        <!-- Membership -->
         <div class="membership">
             <ul >
                 <li><button class="login"><i class="fas fa-sign-in-alt fa-2x"></i><span>Login</span></button></li>
                 <li><button class="myPage"><i class="far fa-user fa-2x"></i><span>My Page</span></button></li>
             </ul>
         </div>
+        <!-- Margin -->
         <div class="membershipMarginHeader"></div>
     </div>
         
     <!-- Category -->
     <section class="category">
+        <!-- Menu -->
         <button class="menu">
             <i class="fas fa-bars fa-2x"></i>
         </button>
+        <!-- Choice -->
         <div class="choice">
             <ul class="sex">
                 <li><input type="checkbox" name="man" id="man"><label for="man">Man</label></li>
@@ -56,10 +65,94 @@
     
     <!-- Shopping List -->
     <section class="shoppingList">
-        <div class="item">
-            <img src="" alt="">
-            <div class="metadata"></div>
-        </div>
+        <ul class="items">
+            <li class="item">
+                <a href="">
+                    <!-- thumbNail -->
+                    <div class="thumbNail">
+                        <img src="img/Man's Pants1.jpg" alt="Pants" class="item_thumbnail">
+                        <button class="LikeBtn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <!-- Item Metadata -->
+                    <div class="metadata">
+                        <p class="title" data-dummytext="-x1-w1-s1-v30"></p>
+                        <p class="description" data-dummytext="-x1-w8-v30"></p>
+                        <div>
+                            <strong class="price">29.9$</strong>
+                            <p class="discount">5%</p>
+                        </div>
+                        <div class="preference">
+                            <div class="starRating">
+                                <i class="far fa-star"></i>
+                                <p class="starNum">35</p>
+                            </div>
+                            <div class="like">
+                                <i class="far fa-heart"></i>
+                                <p class="likeNum">100</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="item">
+                <a href="">
+                    <!-- thumbNail -->
+                    <div class="thumbNail">
+                        <img src="img/Man's Pants2.jpg" alt="Pants" class="item_thumbnail">
+                        <button class="LikeBtn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <!-- Item Metadata -->
+                    <div class="metadata">
+                        <p class="title" data-dummytext="-x1-w1-s1-v30"></p>
+                        <p class="description" data-dummytext="-x1-w8-v30"></p>
+                        <div>
+                            <strong class="price">29.9$</strong>
+                            <p class="discount">5%</p>
+                        </div>
+                        <div class="preference">
+                            <div class="starRating">
+                                <i class="far fa-star"></i>
+                                <p class="starNum">35</p>
+                            </div>
+                            <div class="like">
+                                <i class="far fa-heart"></i>
+                                <p class="likeNum">100</p>
+                            </div>
+                        </div>
+                    </div>  
+                </a>
+            </li>
+            <li class="item">
+                <a href="">
+                    <!-- thumbNail -->
+                    <div class="thumbNail">
+                        <img src="img/Man's Pants3.jpg" alt="Pants" class="item_thumbnail">
+                        <button class="LikeBtn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <!-- Item Metadata -->
+                    <div class="metadata">
+                        <p class="title" data-dummytext="-x1-w1-s1-v30"></p>
+                        <p class="description" data-dummytext="-x1-w8-v30"></p>
+                        <div>
+                            <strong class="price">29.9$</strong>
+                            <p class="discount">5%</p>
+                        </div>
+                        <div class="preference">
+                            <div class="starRating">
+                                <i class="far fa-star"></i>
+                                <p class="starNum">35</p>
+                            </div>
+                            <div class="like">
+                                <i class="far fa-heart"></i>
+                                <p class="likeNum">100</p>
+                            </div>
+                        </div>
+                    </div>  
+                </a>
+            </li>
+        </ul>
     </section>
+    <!-- Lorem Ipsum Generator -->
+    <script src="http://dummytext.com/dt-1.0.min.js"></script><noscript>Powered by <a href="http://dummytext.com">DummyText.com</a></noscript>
 </body>
 </html>
