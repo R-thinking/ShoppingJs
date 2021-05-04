@@ -18,10 +18,10 @@
         <!-- Margin -->
         <div class="headerMarginLogo"></div>
         <!-- Logo -->
-        <button class="logo">
+        <a href="" class="logo">
             <img src="/img/Logo.png" alt="logo">
             <span class="logoName">Js Shopping</span>
-        </button>
+        </a>
         <!-- Margin -->
         <div class="logoMarginLabel"></div>  
         <!-- Search Box -->
@@ -56,6 +56,7 @@
                 <li><input type="checkbox" name="woman" id="woman"><label for="woman">Woman</label></li>
             </ul>
             <ul class="clothes">
+                <li><button class="item">All</button></li>
                 <li><button class="item">Shirt</button></li>
                 <li><button class="item">Pants</button></li>
                 <li><button class="item">Shoes</button></li>
@@ -65,30 +66,33 @@
     
     <!-- Shopping List -->
     <section class="shoppingList">
+        <div class="lookingFor">
+            <p>All</p>
+        </div>
         <ul class="items">
             <li class="item">
                 <a href="">
                     <!-- thumbNail -->
                     <div class="thumbNail">
-                        <img src="img/Man's Pants1.jpg" alt="Pants" class="item_thumbnail">
-                        <button class="LikeBtn"><i class="far fa-heart"></i></button>
+                        <img src="img/Man's Pants1.jpg" alt="Pants" class="item_thumbNail">
+                        <button class="likeBtn"><i class="far fa-heart "></i></button>
                     </div>
                     <!-- Item Metadata -->
                     <div class="metadata">
-                        <p class="title" data-dummytext="-x1-w1-s1-v30"></p>
-                        <p class="description" data-dummytext="-x1-w8-v30"></p>
-                        <div>
+                        <p class="title" data-dummytext="-w1-s1"></p>
+                        <p class="description" data-dummytext="-w10-s10"></p>
+                        <div class="priceTag">
                             <strong class="price">29.9$</strong>
                             <p class="discount">5%</p>
                         </div>
                         <div class="preference">
                             <div class="starRating">
-                                <i class="far fa-star"></i>
-                                <p class="starNum">35</p>
+                                <i class="fas fa-star"></i>
+                                <p class="starNum">4.2</p>
                             </div>
                             <div class="like">
-                                <i class="far fa-heart"></i>
-                                <p class="likeNum">100</p>
+                                <i class="fas fa-heart"></i>
+                                <p class="likeNum">89</p>
                             </div>
                         </div>
                     </div>
@@ -98,56 +102,56 @@
                 <a href="">
                     <!-- thumbNail -->
                     <div class="thumbNail">
-                        <img src="img/Man's Pants2.jpg" alt="Pants" class="item_thumbnail">
-                        <button class="LikeBtn"><i class="far fa-heart"></i></button>
+                        <img src="img/Man's Pants2.jpg" alt="Pants" class="item_thumbNail">
+                        <button class="likeBtn"><i class="far fa-heart"></i></button>
                     </div>
                     <!-- Item Metadata -->
                     <div class="metadata">
-                        <p class="title" data-dummytext="-x1-w1-s1-v30"></p>
-                        <p class="description" data-dummytext="-x1-w8-v30"></p>
-                        <div>
+                        <p class="title" data-dummytext="-w1-s1"></p>
+                        <p class="description" data-dummytext="-w10-s10"></p>
+                        <div class="priceTag">
                             <strong class="price">29.9$</strong>
                             <p class="discount">5%</p>
                         </div>
                         <div class="preference">
                             <div class="starRating">
-                                <i class="far fa-star"></i>
-                                <p class="starNum">35</p>
+                                <i class="fas fa-star"></i>
+                                <p class="starNum">4.2</p>
                             </div>
                             <div class="like">
-                                <i class="far fa-heart"></i>
-                                <p class="likeNum">100</p>
+                                <i class="fas fa-heart"></i>
+                                <p class="likeNum">89</p>
                             </div>
                         </div>
-                    </div>  
+                    </div>
                 </a>
             </li>
             <li class="item">
                 <a href="">
                     <!-- thumbNail -->
                     <div class="thumbNail">
-                        <img src="img/Man's Pants3.jpg" alt="Pants" class="item_thumbnail">
-                        <button class="LikeBtn"><i class="far fa-heart"></i></button>
+                        <img src="img/Man's Pants3.jpg" alt="Pants" class="item_thumbNail">
+                        <button class="likeBtn"><i class="far fa-heart"></i></button>
                     </div>
                     <!-- Item Metadata -->
                     <div class="metadata">
-                        <p class="title" data-dummytext="-x1-w1-s1-v30"></p>
-                        <p class="description" data-dummytext="-x1-w8-v30"></p>
-                        <div>
+                        <p class="title" data-dummytext="-w1-s1"></p>
+                        <p class="description" data-dummytext="--w10-s10"></p>
+                        <div class="priceTag">
                             <strong class="price">29.9$</strong>
                             <p class="discount">5%</p>
                         </div>
                         <div class="preference">
                             <div class="starRating">
-                                <i class="far fa-star"></i>
-                                <p class="starNum">35</p>
+                                <i class="fas fa-star"></i>
+                                <p class="starNum">4.2</p>
                             </div>
                             <div class="like">
-                                <i class="far fa-heart"></i>
-                                <p class="likeNum">100</p>
+                                <i class="fas fa-heart"></i>
+                                <p class="likeNum">89</p>
                             </div>
                         </div>
-                    </div>  
+                    </div>
                 </a>
             </li>
         </ul>
