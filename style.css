@@ -15,12 +15,12 @@
   --margin-block: 55px;
 
   /* Padding */
-  --padding-small: 3px;
-  --padding-normal: 6px;
-  --padding-large: 12px;
+  --padding-small: 5px;
+  --padding-normal: 10px;
+  --padding-large: 14px;
 
   /* Header */
-  --header-margin-topbot: 60px;
+  --header-padding-topbot: 45px;
   --header-margin-logo: 15%;
   --header-logo-width: 18%;
   --logo-margin-label: 2%;
@@ -33,6 +33,8 @@
   --logo-width: 240px;
   --logo-size: 45px;
   --logo-font-size: 30px;
+  --logo-nav-size: 35px;
+  --logo-font-nav-size: 24px;
 
   /* Search Box */
   --search-box-color: #eeeeee;
@@ -64,8 +66,9 @@
 /* body */
 body {
   font-family: Roboto;
-  -ms-overflow-style: none;
+  /* -ms-overflow-style: none; */
 }
+
 body::-webkit-scrollbar {
   display: none;
 }
@@ -98,12 +101,99 @@ a:link {
   text-decoration: none;
 }
 
+/* Navigation */
+/* nav {
+  display: none;
+  /* display: flex; */
+/* width: 100vw;
+  position: relative;
+  margin: var(--margin-normal) 0;
+}
+
+nav.fix {
+  display: flex;
+  position: fixed;
+  top: 0;
+}
+
+nav .logo {
+  display: flex;
+  min-width: fit-content;
+}
+
+nav .logo img {
+  background-color: #f5f5f5;
+  width: var(--logo-nav-size);
+  height: var(--logo-nav-size);
+  border-radius: 50%;
+  margin-right: var(--margin-small);
+}
+
+nav .searchBox {
+  display: flex;
+}
+
+nav .membership ul {
+  display: flex;
+  position: absolute;
+  right: 3%;
+}  */
+
+/* Navigation */
+.header.fix {
+  position: fixed;
+  padding: var(--padding-large);
+  box-shadow: 0.2px 0.5px 5px #c7c7c7;
+  animation: down 0.3s ease;
+  height: 70px;
+  z-index: 1;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.header.fix .menu {
+  visibility: visible;
+}
+
+.header.fix .logo img {
+  width: var(--logo-nav-size);
+  height: var(--logo-nav-size);
+}
+
+.header.fix .logo .logoName {
+  font-size: var(--logo-font-nav-size);
+}
+
+.header.fix .searchBox i {
+}
+
+@keyframes down {
+  0% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 /* Header */
 .header {
   display: flex;
   width: 100vw;
+  background-color: rgba(255, 255, 255, 1);
   position: relative;
-  margin: var(--header-margin-topbot) 0;
+  padding: var(--header-padding-topbot) 0;
+}
+
+.header .menu {
+  visibility: hidden;
+  border: 1px solid #c7c7c7;
+  width: 35px;
+  height: 35px;
+  min-width: 35px;
+  border-radius: 50%;
+  position: relative;
+  right: 15px;
 }
 
 .header .headerMarginLogo {
@@ -149,6 +239,7 @@ a:link {
   width: 75%;
   height: var(--searchBox-textfield-height);
   background-color: var(--search-box-color);
+  z-index: 2;
   margin: auto 0;
   margin-left: 10%;
   font-size: var(--font-large);
@@ -163,7 +254,6 @@ a:link {
 .header label .searchBackground {
   color: var(--search-box-color);
   background-color: var(--search-box-color);
-  z-index: -1;
   width: 100%;
   height: 100%;
   position: absolute;
