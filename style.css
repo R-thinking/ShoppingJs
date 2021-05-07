@@ -26,6 +26,7 @@
   --logo-margin-label: 2%;
   --header-label-width: 30%;
   --label-margin-membership: 26%;
+  --header-moreBtn-width: 15px;
   --header-membership-width: 7%;
   --membership-margin-header: 2%;
 
@@ -33,7 +34,7 @@
   --logo-width: 240px;
   --logo-size: 45px;
   --logo-font-size: 30px;
-  --logo-nav-size: 35px;
+  --logo-nav-size: 30px;
   --logo-font-nav-size: 24px;
 
   /* Search Box */
@@ -151,7 +152,16 @@ nav .membership ul {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-.header.fix .menu {
+@keyframes down {
+  0% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.header.fix .menu .moreBtn {
   visibility: visible;
 }
 
@@ -164,18 +174,6 @@ nav .membership ul {
   font-size: var(--logo-font-nav-size);
 }
 
-.header.fix .searchBox i {
-}
-
-@keyframes down {
-  0% {
-    transform: translateY(-50px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
 /* Header */
 .header {
   display: flex;
@@ -185,19 +183,27 @@ nav .membership ul {
   padding: var(--header-padding-topbot) 0;
 }
 
+/* Margin */
+.header .headerMarginLogo {
+  min-width: 15px;
+  flex: 2 2 var(--header-margin-logo);
+}
+
+/* Menu */
 .header .menu {
+  display: flex;
   visibility: hidden;
+}
+
+.header .menu .moreBtn {
   border: 1px solid #c7c7c7;
   width: 35px;
   height: 35px;
   min-width: 35px;
   border-radius: 50%;
   position: relative;
+  margin: auto 0;
   right: 15px;
-}
-
-.header .headerMarginLogo {
-  flex: 2 2 var(--header-margin-logo);
 }
 
 /* logo */
@@ -208,15 +214,15 @@ nav .membership ul {
   min-width: fit-content;
 }
 .header .logo img {
-  background-color: #f5f5f5;
   width: var(--logo-size);
   height: var(--logo-size);
   border-radius: 50%;
+  margin: auto 0;
   margin-right: var(--margin-small);
 }
 
 .header .logo .logoName {
-  padding-bottom: var(--padding-normal);
+  padding-bottom: var(--padding-small);
   margin: auto 0;
   font-size: var(--logo-font-size);
 }
@@ -292,6 +298,15 @@ nav .membership ul {
   margin-bottom: var(--margin-micro);
 }
 
+/* More Button */
+.header .moreBtn {
+  visibility: hidden;
+  width: (--header-moreBtn-width);
+  min-width: (--header-moreBtn-width);
+  margin: auto 0;
+}
+
+/* Margin */
 .header .membershipMarginHeader {
   flex: 1 1 var(--membership-margin-header);
 }
@@ -500,14 +515,20 @@ nav .membership ul {
 
 /* Responsisve Design */
 
-/* Narrow Desktop or Tablet Pc */
+/* Narrow browser size on Desktop or Tablet Pc size */
 @media screen and (max-width: 1100px) {
-  .category {
-    display: none;
+  .header .membership span {
+    font-size: 11px;
   }
+
+  .category {
+    visibility: hidden;
+  }
+
   .shoppingList .items .item {
     width: 100%;
   }
+
   .shoppingList .items .item a {
     flex-direction: row;
     justify-content: space-around;
@@ -533,3 +554,66 @@ nav .membership ul {
 }
 
 /* Mobile */
+@media screen and (max-width: 720px) {
+  .header.fix {
+    max-width: 100vw;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .header.fix .headerMarginLogo {
+    max-width: 5%;
+    min-width: 5%;
+  }
+  .header.fix .menu {
+    max-width: 10%;
+    min-width: 10%;
+    margin-left: 3%;
+  }
+  .header.fix .menu .searchBtn {
+    visibility: visible;
+  }
+
+  .header.fix .logo {
+    max-width: 35%;
+    margin-left: 22%;
+  }
+
+  .header.fix .logo img {
+    width: 20px;
+    height: 20px;
+  }
+  .header.fix .logo .logoName {
+    font-size: 17px;
+  }
+  .header.fix .logoMarginLabel {
+    display: none;
+    width: 0;
+  }
+  .header.fix label {
+    display: none;
+  }
+
+  .header.fix .labelMarginMembership {
+    max-width: 15%;
+  }
+
+  .header.fix .membership {
+    display: none;
+  }
+
+  .header .membership span {
+    font-size: 0px;
+  }
+
+  .header.fix > .moreBtn {
+    min-width: 5%;
+    max-width: 5%;
+    visibility: visible;
+  }
+
+  .header.fix .membershipMarginHeader {
+    max-width: 5%;
+    min-width: 5%;
+  }
+}
