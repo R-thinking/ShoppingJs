@@ -66,6 +66,7 @@
 
 /* body */
 body {
+  height: fit-content;
   font-family: Roboto;
   /* -ms-overflow-style: none; */
 }
@@ -101,44 +102,6 @@ a:link {
   color: black;
   text-decoration: none;
 }
-
-/* Navigation */
-/* nav {
-  display: none;
-  /* display: flex; */
-/* width: 100vw;
-  position: relative;
-  margin: var(--margin-normal) 0;
-}
-
-nav.fix {
-  display: flex;
-  position: fixed;
-  top: 0;
-}
-
-nav .logo {
-  display: flex;
-  min-width: fit-content;
-}
-
-nav .logo img {
-  background-color: #f5f5f5;
-  width: var(--logo-nav-size);
-  height: var(--logo-nav-size);
-  border-radius: 50%;
-  margin-right: var(--margin-small);
-}
-
-nav .searchBox {
-  display: flex;
-}
-
-nav .membership ul {
-  display: flex;
-  position: absolute;
-  right: 3%;
-}  */
 
 /* Navigation */
 .header.fix {
@@ -238,7 +201,7 @@ nav .membership ul {
   align-items: center;
   position: relative;
   flex: 1 1 var(--header-label-width);
-  min-width: 300px;
+  min-width: 270px;
 }
 
 .header label input {
@@ -511,6 +474,197 @@ nav .membership ul {
 
 .shoppingList .items .item .metadata .preference .like p {
   margin: auto 0;
+}
+
+/* Category Hidden Bar */
+.categoryBar {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(55, 55, 55, 0.692);
+  position: fixed;
+  top: 0;
+  z-index: 3;
+}
+
+.categoryBar.appear {
+  display: block;
+  animation: fadeIn 0.7s ease;
+}
+
+.categoryBar.disappear {
+  animation: fadeOut 0.7s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.categoryBar .inner {
+  display: flex;
+  flex-direction: column;
+  width: 290px;
+  height: 100vh;
+  background-color: white;
+}
+
+.categoryBar.appear .inner {
+  animation: slideInRight 0.7s ease;
+}
+
+.categoryBar.disappear .inner {
+  animation: slideInLeft 0.7s ease;
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(-250px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-250px);
+  }
+}
+
+.categoryBar .inner .categoryHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 15px;
+}
+
+.categoryBar .inner .categoryHeader .logo {
+  display: flex;
+  width: 120px;
+  justify-content: space-between;
+}
+
+.categoryBar .inner .categoryHeader .logo img {
+  width: 25px;
+  height: 25px;
+}
+
+.categoryBar .inner .categoryHeader .logo span {
+  font-size: 16px;
+}
+
+.categoryBar .inner .menu {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--margin-large);
+  padding: 0 15px;
+}
+
+.categoryBar .inner .menu p {
+  font-size: 20px;
+  width: 80%;
+  height: 32px;
+  border-bottom: 1px solid #373737;
+}
+
+.categoryBar .inner .menu .clothes {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  height: 200px;
+  justify-content: space-around;
+}
+
+.categoryBar .inner .menu .clothes .item {
+  font-size: 18px;
+}
+
+/* Search Hidden Bar */
+.searchBar {
+  display: none;
+  width: 100vw;
+  height: 80px;
+  background-color: rgba(55, 55, 55, 0.692);
+  position: fixed;
+  top: 70px;
+  z-index: 0;
+}
+
+.searchBar.appear {
+  display: block;
+  animation: slideInDown 0.4s ease;
+}
+
+.searchBar.disappear {
+  /* display: none; */
+  animation: slideOutUp 0.4s ease;
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-15px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutUp {
+  from {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-15px);
+    opacity: 0;
+  }
+}
+
+.searchBar .searchField {
+  background-color: #ffffff;
+  width: 90%;
+  height: 27px;
+  margin-left: 5%;
+  position: relative;
+  top: 25px;
+}
+
+.searchBar .searchField label {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 5px;
+}
+
+.searchBar .searchField input {
+  background-color: #ffffff;
+  width: 95%;
+}
+
+.searchBar .escBtn {
+  position: absolute;
+  color: #eeeeee;
+  right: 7px;
+  bottom: 3px;
 }
 
 /* Responsisve Design */
