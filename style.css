@@ -517,7 +517,7 @@ a:link {
 .categoryBar .inner {
   display: flex;
   flex-direction: column;
-  width: 290px;
+  width: 270px;
   height: 100vh;
   background-color: white;
 }
@@ -769,5 +769,84 @@ a:link {
   .header.fix .membershipMarginHeader {
     max-width: 5%;
     min-width: 5%;
+  }
+
+  .category {
+    height: 30px;
+  }
+
+  .categoryBar .inner {
+    width: 240px;
+  }
+
+  .shoppingList .lookingFor p {
+    font-size: 18px;
+  }
+
+  .shoppingList .items {
+    width: 93vw;
+    margin-top: 30px;
+    padding-top: 30px;
+  }
+
+  .shoppingList .items .item {
+    width: 46%;
+    margin: 0 2%;
+  }
+
+  .shoppingList .items .item a {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .shoppingList .items .item a .thumbNail {
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+  }
+
+  .shoppingList .items .item a .thumbNail img {
+    width: 140px;
+    height: 170px;
+  }
+
+  .shoppingList .items .item a .thumbNail .likeBtn {
+    position: absolute;
+    height: fit-content;
+    right: 0;
+  }
+
+  .shoppingList .items .item a .metadata {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .shoppingList .items .item a .metadata .title {
+    font-size: 13px;
+  }
+
+  .shoppingList .items .item a .metadata .description {
+    font-size: 13px;
+    height: fit-content;
+    margin-bottom: 2px;
+  }
+
+  .shoppingList .items .item a .metadata .priceTag {
+    margin-bottom: 0;
+  }
+
+  .shoppingList .items .item a .metadata .priceTag .price {
+    font-size: 13px;
+  }
+
+  .shoppingList .items .item a .metadata .priceTag .discount {
+    font-size: 13px;
+    position: absolute;
+    right: 0;
+  }
+
+  .shoppingList .items .item a .metadata .preference p {
+    font-size: 13px;
   }
 }

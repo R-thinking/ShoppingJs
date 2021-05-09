@@ -82,7 +82,7 @@ function DisappearCategoryBar() {
     const categoryBar=document.querySelector('.categoryBar');
     EscBtn.addEventListener('click',()=> {
         categoryBar.classList.add('disappear');
-        setTimeout(()=>categoryBar.classList.remove('appear'),700);
+        setTimeout(()=>categoryBar.classList.remove('appear'),690);
     });
 
 }
@@ -104,7 +104,7 @@ function ControlSearchBar() {
         // Disappear SearchBar
         else if(searchBar.classList.contains('appear')){
             searchBar.classList.add('disappear');
-            setTimeout(()=>searchBar.classList.remove('appear'),400);
+            setTimeout(()=>searchBar.classList.remove('appear'),390);
         }
         // Appear SearchBar at first
         else {
@@ -117,14 +117,14 @@ function ControlSearchBar() {
         const clientWidth = document.body.clientWidth;
         if(clientWidth>720){
             searchBar.classList.add('disappear');
-            setTimeout(()=>searchBar.classList.remove('appear'),400);
+            setTimeout(()=>searchBar.classList.remove('appear'),390);
         }
     });
 
     // Esc button click
     escBtn.addEventListener('click',()=> {
         searchBar.classList.add('disappear');
-        setTimeout(()=>searchBar.classList.remove('appear'),400);
+        setTimeout(()=>searchBar.classList.remove('appear'),390);
     });
 
 }
