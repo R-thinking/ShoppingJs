@@ -65,14 +65,32 @@
         <!-- Choice -->
         <div class="choice">
             <ul class="sex">
-                <li><input type="checkbox" name="man" id="man"><label for="man">Man</label></li>
-                <li><input type="checkbox" name="woman" id="woman"><label for="woman">Woman</label></li>
+                <li>
+                    <input 
+                        type="checkbox" 
+                        name="man" 
+                        id="man"
+                        data-key="gender"
+                        data-value="man"
+                    />
+                    <label for="man">Man</label>
+                </li>
+                <li>
+                    <input 
+                        type="checkbox" 
+                        name="woman" 
+                        id="woman"
+                        data-key="gender"
+                        data-value="woman"
+                    />
+                    <label for="woman">Woman</label>
+                </li>
             </ul>
             <ul class="clothes">
-                <li><button class="item">All</button></li>
-                <li><button class="item">Shirt</button></li>
-                <li><button class="item">Pants</button></li>
-                <li><button class="item">Shoes</button></li>
+                <li><button class="item" data-key="type" data-value="all">All</button></li>
+                <li><button class="item" data-key="type" data-value="shirt">Shirt</button></li>
+                <li><button class="item" data-key="type" data-value="pants">Pants</button></li>
+                <li><button class="item" data-key="type" data-value="shoes">Shoes</button></li>
             </ul>
         </div>
     </section>
@@ -95,8 +113,8 @@
                         <p class="title" data-dummytext="-w1-s1"></p>
                         <p class="description" data-dummytext="-w10-s10"></p>
                         <div class="priceTag">
-                            <strong class="price">29.9$</strong>
-                            <p class="discount">5%</p>
+                            <strong class="price" >29.9$</strong>
+                            <p class="discount" >5%</p>
                         </div>
                         <div class="preference">
                             <div class="starRating">

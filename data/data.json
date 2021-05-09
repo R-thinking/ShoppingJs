@@ -1,0 +1,31 @@
+{
+    "items": [
+        {
+            "type": "pants",
+            "gender": "man",
+            "image": "../img/Man's Pants1",
+            "price": "29.9",
+            "discount": "5",
+            "starNum": "4.5",
+            "likeNum": "79"
+        },
+        {
+            "type": "pants",
+            "gender": "man",
+            "image": "../img/Man's Pants2",
+            "price": "29.9",
+            "discount": "5",
+            "starNum": "4.5",
+            "likeNum": "79"
+        },
+        {
+            "type": "pants",
+            "gender": "man",
+            "image": "../img/Man's Pants3",
+            "price": "29.9",
+            "discount": "5",
+            "starNum": "4.5",
+            "likeNum": "79"
+        }
+    ]
+}
