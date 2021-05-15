@@ -3,29 +3,201 @@
         {
             "type": "pants",
             "gender": "man",
-            "image": "../img/Man's Pants1",
+            "image": "../img/Man's Pants1.jpg",
             "price": "29.9",
             "discount": "5",
             "starNum": "4.5",
-            "likeNum": "79"
+            "likeNum": "79",
+            "brand": "Brand",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit vestibulum sem."
         },
         {
             "type": "pants",
             "gender": "man",
-            "image": "../img/Man's Pants2",
+            "image": "../img/Man's Pants2.jpg",
             "price": "29.9",
             "discount": "5",
             "starNum": "4.5",
-            "likeNum": "79"
+            "likeNum": "79",
+            "brand": "Brand",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit vestibulum sem."
         },
         {
             "type": "pants",
             "gender": "man",
-            "image": "../img/Man's Pants3",
+            "image": "../img/Man's Pants3.jpg",
             "price": "29.9",
             "discount": "5",
             "starNum": "4.5",
-            "likeNum": "79"
+            "likeNum": "79",
+            "brand": "Brand",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit vestibulum sem."
+        },
+        {
+            "type": "shirt",
+            "gender": "man",
+            "image": "../img/Man's shirt1.jpg",
+            "price": "29.9",
+            "discount": "5",
+            "starNum": "4.5",
+            "likeNum": "79",
+            "brand": "Brand",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit vestibulum sem."
+        },
+        {
+            "type": "shirt",
+            "gender": "man",
+            "image": "../img/Man's shirt2.jpg",
+            "price": "29.9",
+            "discount": "5",
+            "starNum": "4.5",
+            "likeNum": "79",
+            "brand": "Brand",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit vestibulum sem."
+        },
+        {
+            "type": "shirt",
+            "gender": "man",
+            "image": "../img/Man's shirt2.jpg",
+            "price": "29.9",
+            "discount": "5",
+            "starNum": "4.5",
+            "likeNum": "79",
+            "brand": "Brand",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit vestibulum sem."
+        },
+        {
+            "type": "shoes",
+            "gender": "man",
+            "image": "../img/Man's shoes1.jpg",
+            "price": "29.9",
+            "discount": "5",
+            "starNum": "4.5",
+            "likeNum": "79",
+            "brand": "Brand",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit vestibulum sem."
+        },
+        {
+            "type": "shoes",
+            "gender": "man",
+            "image": "../img/Man's shoes2.jpg",
+            "price": "29.9",
+            "discount": "5",
+            "starNum": "4.5",
+            "likeNum": "79",
+            "brand": "Brand",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit vestibulum sem."
+        },
+        {
+            "type": "shoes",
+            "gender": "man",
+            "image": "../img/Man's shoes3.jpg",
+            "price": "29.9",
+            "discount": "5",
+            "starNum": "4.5",
+            "likeNum": "79",
+            "brand": "Brand",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit vestibulum sem."
+        },
+        {
+            "type": "pants",
+            "gender": "woman",
+            "image": "../img/Woman's Pants1.jpg",
+            "price": "29.9",
+            "discount": "5",
+            "starNum": "4.5",
+            "likeNum": "79",
+            "brand": "Brand",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit vestibulum sem."
+        },
+        {
+            "type": "pants",
+            "gender": "woman",
+            "image": "../img/Woman's Pants2.jpg",
+            "price": "29.9",
+            "discount": "5",
+            "starNum": "4.5",
+            "likeNum": "79",
+            "brand": "Brand",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit vestibulum sem."
+        },
+        {
+            "type": "pants",
+            "gender": "woman",
+            "image": "../img/Woman's Pants3.jpg",
+            "price": "29.9",
+            "discount": "5",
+            "starNum": "4.5",
+            "likeNum": "79",
+            "brand": "Brand",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit vestibulum sem."
+        },
+        {
+            "type": "shirt",
+            "gender": "woman",
+            "image": "../img/Woman's shirt1.jpg",
+            "price": "29.9",
+            "discount": "5",
+            "starNum": "4.5",
+            "likeNum": "79",
+            "brand": "Brand",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit vestibulum sem."
+        },
+        {
+            "type": "shirt",
+            "gender": "woman",
+            "image": "../img/Woman's shirt2.jpg",
+            "price": "29.9",
+            "discount": "5",
+            "starNum": "4.5",
+            "likeNum": "79",
+            "brand": "Brand",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit vestibulum sem."
+        },
+        {
+            "type": "shirt",
+            "gender": "woman",
+            "image": "../img/Woman's shirt3.jpg",
+            "price": "29.9",
+            "discount": "5",
+            "starNum": "4.5",
+            "likeNum": "79",
+            "brand": "Brand",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit vestibulum sem."
+        },
+        {
+            "type": "shoes",
+            "gender": "woman",
+            "image": "../img/Woman's shoes1.jpg",
+            "price": "29.9",
+            "discount": "5",
+            "starNum": "4.5",
+            "likeNum": "79",
+            "brand": "Brand",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit vestibulum sem."
+        },
+        {
+            "type": "shoes",
+            "gender": "woman",
+            "image": "../img/Woman's shoes2.jpg",
+            "price": "29.9",
+            "discount": "5",
+            "starNum": "4.5",
+            "likeNum": "79",
+            "brand": "Brand",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit vestibulum sem."
+        },
+        {
+            "type": "shoes",
+            "gender": "woman",
+            "image": "../img/Woman's shoes3.jpg",
+            "price": "29.9",
+            "discount": "5",
+            "starNum": "4.5",
+            "likeNum": "79",
+            "brand": "Brand",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit vestibulum sem."
         }
+
     ]
 }

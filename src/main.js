@@ -2,17 +2,26 @@
 
 // Main
 {
-    CreateNavigation();
-    AppearCategoryBar();
-    DisappearCategoryBar();
-    ControlSearchBar();
+    createNavigation();
+    appearCategoryBar();
+    disappearCategoryBar();
+    controlSearchBar();
+
+    loadItems()
+    .then(items => {
+        // console.log(items);
+        displayItems(items);
+        setEventListeners(items);
+    })
+    .catch(console.log);
+
 }
 
 // Function
 
 // Create Navigation when user scroll down under header 
 // or browser width is smaller than 1100px
-function CreateNavigation () {
+function createNavigation () {
     const header =document.querySelector('.header');
     const headerHeight = header.clientHeight;
     const membershipIcon = document.querySelectorAll('.header .membership i');
@@ -66,7 +75,7 @@ function CreateNavigation () {
 }
 
 // Appear CategoryBar
-function AppearCategoryBar() {
+function appearCategoryBar() {
     const menuBtn=document.querySelector('.header .menu .moreBtn');
     const categoryBar=document.querySelector('.categoryBar');
     menuBtn.addEventListener('click',()=> {
@@ -77,7 +86,7 @@ function AppearCategoryBar() {
 }
 
 // Disappear CategoryBar
-function DisappearCategoryBar() {
+function disappearCategoryBar() {
     const EscBtn = document.querySelector('.categoryBar .inner .categoryHeader .escBtn');
     const categoryBar=document.querySelector('.categoryBar');
     EscBtn.addEventListener('click',()=> {
@@ -88,7 +97,7 @@ function DisappearCategoryBar() {
 }
 
 // Control SearchBar
-function ControlSearchBar() {
+function controlSearchBar() {
     const searchBtn = document.querySelector('.header .menu .searchBtn');
     const searchBar = document.querySelector('.searchBar');
     const escBtn = document.querySelector('.searchBar .escBtn');
@@ -128,3 +137,77 @@ function ControlSearchBar() {
     });
 
 }
+
+// *load and display Shopping List Items*
+
+// Fetch the items from the Json file
+function loadItems() {
+    return fetch('data/data.json')
+        .then(response => response.json())
+        .then(json => json.items);
+}
+
+// 
+function displayItems (items) {
+    const container = document.querySelector('.shoppingList .items');
+    container.innerHTML = items.map(item => createHTMLString(item)).join(' ');
+}
+
+// 
+function createHTMLString(item) {
+    return `
+    <li class="item">
+        <a href="">
+            <!-- thumbNail -->
+            <div class="thumbNail">
+                <img src="${item.image}" alt="${item.type}" class="item_thumbNail">
+                <button class="likeBtn"><i class="far fa-heart "></i></button>
+            </div>
+            <div class="metadata">
+                <p class="title" data-dummytext="-w1-s1">${item.brand}</p>
+                <p class="description" data-dummytext="-w10-s10">${item.description}</p>
+                <div class="priceTag">
+                    <strong class="price" >${item.price}$</strong>
+                    <p class="discount" >${item.discount}%</p>
+                </div>
+                <div class="preference">
+                    <div class="starRating">
+                        <i class="fas fa-star"></i>
+                        <p class="starNum">${item.starNum}</p>
+                    </div>
+                    <div class="like">
+                        <i class="fas fa-heart"></i>
+                        <p class="likeNum">${item.likeNum}</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </li>
+    `;
+}
+
+function onItemClick(event, items) {
+    const dataset =  event.target.dataset;
+    const key = dataset.key;
+    const value = dataset.value;
+
+    if(key == null || value ==null) {
+        return;
+    }
+
+    else if(value === "all") {
+        displayItems(items);
+        return;
+    }
+
+    displayItems(items.filter(item => item[key] === value));
+}
+
+function setEventListeners(items) {
+    const logo = document.querySelector('.logo');
+    const choiceBtn = document.querySelector('.choice .clothes');
+    console.log(choiceBtn);
+    logo.addEventListener('click', () => displayItems(items));
+    choiceBtn.addEventListener('click', event =>onItemClick(event, items));
+}
+
