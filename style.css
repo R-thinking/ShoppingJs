@@ -353,6 +353,7 @@ a:link {
 }
 
 .shoppingList .lookingFor p {
+  text-transform: capitalize;
   font-size: 25px;
 }
 .shoppingList .items {

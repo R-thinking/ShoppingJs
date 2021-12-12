@@ -9,7 +9,6 @@
 
     loadItems()
     .then(items => {
-        // console.log(items);
         displayItems(items);
         setEventListeners(items);
     })
@@ -91,7 +90,7 @@ function disappearCategoryBar() {
     const categoryBar=document.querySelector('.categoryBar');
     EscBtn.addEventListener('click',()=> {
         categoryBar.classList.add('disappear');
-        setTimeout(()=>categoryBar.classList.remove('appear'),690);
+        setTimeout(()=>categoryBar.classList.remove('appear'),650);
     });
 
 }
@@ -113,7 +112,7 @@ function controlSearchBar() {
         // Disappear SearchBar
         else if(searchBar.classList.contains('appear')){
             searchBar.classList.add('disappear');
-            setTimeout(()=>searchBar.classList.remove('appear'),390);
+            setTimeout(()=>searchBar.classList.remove('appear'),350);
         }
         // Appear SearchBar at first
         else {
@@ -126,14 +125,14 @@ function controlSearchBar() {
         const clientWidth = document.body.clientWidth;
         if(clientWidth>720){
             searchBar.classList.add('disappear');
-            setTimeout(()=>searchBar.classList.remove('appear'),390);
+            setTimeout(()=>searchBar.classList.remove('appear'),350);
         }
     });
 
     // Esc button click
     escBtn.addEventListener('click',()=> {
         searchBar.classList.add('disappear');
-        setTimeout(()=>searchBar.classList.remove('appear'),390);
+        setTimeout(()=>searchBar.classList.remove('appear'),350);
     });
 
 }
@@ -160,7 +159,7 @@ function createHTMLString(item) {
         <a href="">
             <!-- thumbNail -->
             <div class="thumbNail">
-                <img src="${item.image}" alt="${item.type}" class="item_thumbNail">
+                <img src="${item.image}" alt="${item.type}"  class="item_thumbNail">
                 <button class="likeBtn"><i class="far fa-heart "></i></button>
             </div>
             <div class="metadata">
@@ -190,12 +189,29 @@ function onItemClick(event, items) {
     const dataset =  event.target.dataset;
     const key = dataset.key;
     const value = dataset.value;
+    const lookingFor = document.querySelector('.shoppingList .lookingFor p');
 
     if(key == null || value ==null) {
         return;
     }
 
     else if(value === "all") {
+        lookingFor.innerHTML = `${value}`;
+        displayItems(items);
+        return;
+    }
+    
+    lookingFor.innerHTML = `${value}`;
+    displayItems(items.filter(items => items[key] === value));
+}
+
+function onGenderCheck(event, items) {
+    const checked = event.target.checked;
+    const dataset = event.target.dataset;
+    const key = dataset.key;
+    const value =dataset.value;
+
+    if(!checked) {
         displayItems(items);
         return;
     }
@@ -206,8 +222,17 @@ function onItemClick(event, items) {
 function setEventListeners(items) {
     const logo = document.querySelector('.logo');
     const choiceBtn = document.querySelector('.choice .clothes');
-    console.log(choiceBtn);
+    const hiddenCategory = document.querySelector('.categoryBar .clothes');
+    const genderCheck = document.querySelector('.category .choice .sex');
+
     logo.addEventListener('click', () => displayItems(items));
-    choiceBtn.addEventListener('click', event =>onItemClick(event, items));
+    choiceBtn.addEventListener('click', event => onItemClick(event, items));
+    hiddenCategory.addEventListener('click', event => {
+        const categoryBar = document.querySelector('.categoryBar');
+        onItemClick(event, items);
+        categoryBar.classList.add('disappear');
+        setTimeout(()=>categoryBar.classList.remove('appear'),650);
+    });
+    genderCheck.addEventListener('input', event => onGenderCheck(event,items));
 }
 
