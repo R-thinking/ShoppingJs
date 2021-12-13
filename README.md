@@ -20,9 +20,49 @@
   <tr align="center">
     <td colspan="2"> <b>Responsive Design</b> </td>
   </tr>
-  <td align="center"> <img src="/photos/Greaterthan.png" width="768" height="550"/> <span>  greater than 768px </span> </td>
-  <td align="center"> <img src="/photos/Smallerthan.png" width="350" height="550"/> <span> smaller than 768px </span> </td>
+  <td align="center"> <img src="/photos/Greaterthan.png" width="768" height="474"/> </td>
+  <td align="center"> <img src="/photos/Smallerthan.png" width="350" height="566"/> </td>
+  <tr align="center">
+    <td><span>  greater than 768px </span></td>
+    <td><span> smaller than 768px </span></td>
+  </tr>
 </table>
+<table cellspacing="0">
+   <tr align="center" >
+     <td rowspan="2"> <b>A navigator</b> </td>
+    <td><span> Non-display </span></td>
+     <td><img src="/photos/Non-display(navigator).png" width="368" height="40"/></td>
+  </tr>
+  <tr>
+    <td><span> Display </span></td>
+    <td><img src="/photos/Display(navigator).png" width="368" height="40"/></td>
+  </tr>
+</table>
+  
+  <table cellspacing="0">
+  <tr align="center">
+    <td colspan="2"> <b>A categorybar</b> </td>
+  </tr>
+     <td><img src="/photos/Non-display(Categorybar).png" width="568" height="351"/></td>
+    <td><img src="/photos/Display(Categorybar).png" width="568" height="351"/></td>
+  <tr align="center">
+    <td><span> Non-display </span></td>
+    <td><span> Display </span></td>
+  </tr>
+  </table>
+  
+  <table cellspacing="0">
+  <tr align="center">
+    <td colspan="2"> <b>A searchbar</b> </td>
+  </tr>
+     <td><img src="/photos/Non-display(Searchbar).png" width="368" height="595"/></td>
+    <td><img src="/photos/Display(Searchbar).png" width="368" height="595"/></td>
+  <tr align="center">
+    <td><span> Non-display </span></td>
+    <td><span> Display </span></td>
+  </tr>
+  </table>
+  
 
 <br/>
 
