@@ -10,7 +10,7 @@
 
 ## Description
 
-> To build very simple functions like things used in shopping web with Javascript.
+> It's shopping website built by only Html&CSS and Vanilla JS. It has several basic functions. First, it can display informations about clothes (such as images, description, like count etc.) fetching from json files. Second, responsive design is applied it. Third, Users are able to arrage clothes according to category selected by clicking it. There are, in addition, a few further points like navigator.
 
 <br/>
 
@@ -62,7 +62,7 @@
     <td><span> Display </span></td>
   </tr>
   </table>
-  
+
 
 <br/>
 
